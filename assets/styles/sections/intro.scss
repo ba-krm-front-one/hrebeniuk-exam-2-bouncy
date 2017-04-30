@@ -1,0 +1,74 @@
+.intro {
+  background: #74624A url("../images/intro-background.jpg") 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 45px 0;
+  position: relative;
+  min-height: 737px;
+  color: $light-color;
+  text-align: center;
+  &__logo{
+    display: block;
+    float: left;
+  }
+  &__navigation {
+    float: right;
+  }
+  &__banner {
+    padding-top: 240px;
+    max-width: 650px;
+    &--title {
+      font: $title-font;
+      color: $light-color;
+      letter-spacing: 7px;
+      font-size: 35px;
+      position: relative;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    &--text {
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+  }
+  &__scroll {
+    @include horizontal-center(-18px);
+    @include border-radius(50%);
+    background:$main-color url("../images/arrow-scroll.png") 50% no-repeat;
+    width: 36px;
+    height: 36px;
+    bottom: 77px;
+    &:hover {
+      box-shadow: 0 0 20px $main-color;
+      transform: translateY(10px);
+      transition: $transform-time;
+    }
+  }
+}
+.main-menu {
+  @media all and (max-width: 1000px){
+    display: flex;
+    flex-direction: column
+  }
+  &__items {
+    display: inline-block;
+    margin-left: 3px;
+    @media all and (max-width: 1000px){
+      display: block;
+      text-align: right;
+      margin: 0 0 10px;
+    }
+  }
+  &__link {
+    color: $light-color;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    &--active, &:hover {
+      border-color: $light-color;
+      @include border-radius(20px);
+    }
+  }
+}

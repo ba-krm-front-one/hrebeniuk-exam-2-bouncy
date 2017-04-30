@@ -1,0 +1,37 @@
+.portfolio {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+  &__filters {
+    color: $text-color;
+    line-height: 12px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    &:after {
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      bottom: -12px;
+      content: "";
+      background-color: $main-color;
+      left: 0;
+      right: 0;
+      transform: translateY(-15px);
+      transition: $transform-time;
+      opacity: 0;
+    }
+    &--in-checked:after, &:hover:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &-images {
+    margin: auto;
+    &__items img:hover {
+      box-shadow: #464646 0 0 10px;
+    }
+  }
+}

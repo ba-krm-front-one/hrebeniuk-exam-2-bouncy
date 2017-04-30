@@ -1,0 +1,20 @@
+#map-canvas{
+  height: 439px;
+}
+.contact-link{
+  background: #000000 url("../images/background-contact.jpg") 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 201px;
+  text-align: center;
+  color: white;
+}
+.contact-us__button{
+  background: transparent;
+}
+.contact-us__text{
+  color: $light-color;
+  font-size: 20px;
+  font-weight: 400;
+ padding: 40px 0;
+}
